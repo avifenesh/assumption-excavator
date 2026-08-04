@@ -1,4 +1,8 @@
 #!/bin/bash
 # blend <anchor-text> [temp] [k]  -> JSON list of far real domains for analogy
+# NOTE: environment-specific paths, kept as-run for the recorded trials.
+# The interpreter is a local sxc venv and /tmp/collide_blend.py was a scratch
+# copy of tools/collide_blend.py. To reuse: point the line below at your own
+# python and at tools/collide_blend.py (needs itch's collide corpus, see README).
 ~/projects/splade-3-colbert-2/.venv/bin/python /tmp/collide_blend.py \
   --anchor "$1" --temp "${2:-0.8}" --k "${3:-4}" 2>/dev/null
