@@ -1,0 +1,4 @@
+#!/bin/bash
+# blend <anchor-text> [temp] [k]  -> JSON list of far real domains for analogy
+~/projects/splade-3-colbert-2/.venv/bin/python /tmp/collide_blend.py \
+  --anchor "$1" --temp "${2:-0.8}" --k "${3:-4}" 2>/dev/null
