@@ -155,9 +155,10 @@ All under `~/projects/assumption-excavator/`:
 - Raw run logs: `runs/v1.jsonl`, `runs/v2.jsonl`, `runs/v3.jsonl`
 - Tracer: `tools/trace.py <jsonl> [full|headers]`
 
-Note: `tools/blend` and `tools/collide_blend.py` hardcode `/tmp/collide_blend.py` and the sxc venv
+Note: `tools/blend` hardcodes `/tmp/collide_blend.py` and the sxc venv
 (`~/projects/splade-3-colbert-2/.venv/bin/python`). Edit `blend` to point at `tools/collide_blend.py`
-before reuse. Requires itch's collide corpus at `~/.config/itch/collide/` (17320 embedded domains).
+before reuse. `tools/collide_blend.py` imports itch's `collide_sample.py` from `~/projects/itch`.
+Requires itch's collide corpus at `~/.config/itch/collide/` (17320 embedded domains).
 
 Run v3:
 ```
